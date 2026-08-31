@@ -21,3 +21,21 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
+@media (max-width: 600px) {
+    .hero {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
