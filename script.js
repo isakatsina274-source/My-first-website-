@@ -1,9 +1,4 @@
 const button = document.querySelector("button");
-
-button.addEventListener("click", function () {
-    alert("Hello! Thanks for visiting my website.");
-});
-const button = document.querySelector("button");
 const heading = document.querySelector(".title");
 const message = document.querySelector("p");
 
