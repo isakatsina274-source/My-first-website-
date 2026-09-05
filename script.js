@@ -1,4 +1,4 @@
-const button = document.querySelector("button");
+const button = document.querySelector("#contactButton");
 const heading = document.querySelector(".title");
 const message = document.querySelector("p");
 const subtitle = document.querySelector(".subtitle");
