@@ -14,6 +14,7 @@ button.addEventListener("click", function () {
 } else {
      heading.textContent = "Welcome to Isa’s Website";
         message.textContent = "Click the button to change the page!";
+  subtitle.textContent = "My First Project";
         clicked = false;
     }
 });
