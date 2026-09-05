@@ -42,4 +42,8 @@ button {
     width: 100%;
     max-width: 300px;
     }
+    .subtitle {
+    color: green;
+    font-size: 28px;
+}
 }
