@@ -17,6 +17,13 @@ function changeSubtitle() {
 function resetHeading() {
     heading.textContent = "Welcome to Isa’s Website";
 }
+function resetMessage() {
+    message.textContent = "Click the button to change the page!";
+}
+
+function resetSubtitle() {
+    subtitle.textContent = "My First Project";
+}
 button.addEventListener("click", function () {
 
  if (clicked === false) {
@@ -26,8 +33,8 @@ button.addEventListener("click", function () {
      clicked = true;
 } else {
      resetHeading();
-        message.textContent = "Click the button to change the page!";
-  subtitle.textContent = "My First Project";
+       resetMessage();
+        resetSubtitle();  
         clicked = false;
     }
 });
