@@ -13,6 +13,8 @@ function changeMessage() {
     message.textContent = "You just changed this webpage with JavaScript!";
 }
 
+subtitle.textContent = "I am becoming a frontend developer!";
+
 button.addEventListener("click", function () {
 
  changeHeading();
@@ -24,7 +26,7 @@ console.log(subtitle);
  if (clicked === false) {
     changeHeading();
     changeMessage();
-  subtitle.textContent = "I am becoming a frontend developer!";
+  changeSubtitle();
      clicked = true;
 } else {
      heading.textContent = "Welcome to Isa’s Website";
