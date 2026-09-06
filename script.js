@@ -18,7 +18,7 @@ console.log(subtitle);
  
  
  if (clicked === false) {
-    heading.textContent = "Welcome to My World!";
+    changeHeading();
     message.textContent = "You just changed this webpage with JavaScript!";
   subtitle.textContent = "I am becoming a frontend developer!";
      clicked = true;
