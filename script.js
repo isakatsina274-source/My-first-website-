@@ -19,10 +19,6 @@ function changeSubtitle() {
 }
 button.addEventListener("click", function () {
 
-console.log(subtitle);
-
- 
- 
  if (clicked === false) {
     changeHeading();
     changeMessage();
