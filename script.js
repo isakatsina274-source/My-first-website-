@@ -5,8 +5,17 @@ const subtitle = document.querySelector(".subtitle");
 
 let clicked = false;
 
+function changeHeading() {
+    heading.textContent = "Welcome to My World!";
+}
+
 button.addEventListener("click", function () {
+
+ changeHeading();
+ 
 console.log(subtitle);
+
+ 
  
  if (clicked === false) {
     heading.textContent = "Welcome to My World!";
