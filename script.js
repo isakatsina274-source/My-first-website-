@@ -8,14 +8,14 @@ let clicked = false;
 function changeHeading() {
     heading.textContent = "Welcome to My World!";
 }
-
 function changeMessage() {
     message.textContent = "You just changed this webpage with JavaScript!";
 }
-
-
 function changeSubtitle() {
     subtitle.textContent = "I am becoming a frontend developer!";
+}
+function resetHeading() {
+    heading.textContent = "Welcome to Isa’s Website";
 }
 button.addEventListener("click", function () {
 
@@ -25,7 +25,7 @@ button.addEventListener("click", function () {
   changeSubtitle();
      clicked = true;
 } else {
-     heading.textContent = "Welcome to Isa’s Website";
+     resetHeading();
         message.textContent = "Click the button to change the page!";
   subtitle.textContent = "My First Project";
         clicked = false;
