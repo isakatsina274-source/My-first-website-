@@ -12,13 +12,13 @@ function changeHeading() {
 function changeMessage() {
     message.textContent = "You just changed this webpage with JavaScript!";
 }
-function changesubtitle() {
-subtitle.textContent = "I am becoming a frontend developer!";
 
+
+function changeSubtitle() {
+    subtitle.textContent = "I am becoming a frontend developer!";
+}
 button.addEventListener("click", function () {
 
- changeHeading();
- 
 console.log(subtitle);
 
  
