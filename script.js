@@ -9,6 +9,10 @@ function changeHeading() {
     heading.textContent = "Welcome to My World!";
 }
 
+function changeMessage() {
+    message.textContent = "You just changed this webpage with JavaScript!";
+}
+
 button.addEventListener("click", function () {
 
  changeHeading();
@@ -19,7 +23,7 @@ console.log(subtitle);
  
  if (clicked === false) {
     changeHeading();
-    message.textContent = "You just changed this webpage with JavaScript!";
+    changeMessage();
   subtitle.textContent = "I am becoming a frontend developer!";
      clicked = true;
 } else {
