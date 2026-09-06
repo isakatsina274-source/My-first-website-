@@ -5,18 +5,22 @@ const subtitle = document.querySelector(".subtitle");
 
 let clicked = false;
 
-function changeHeading() {
-    heading.textContent = "Welcome to My World!";
+function changeHeading(text) {
+    heading.textContent = text;
 }
-function changeMessage() {
-    message.textContent = "You just changed this webpage with JavaScript!";
+
+function changeMessage(text) {
+    message.textContent = text;
 }
-function changeSubtitle() {
-    subtitle.textContent = "I am becoming a frontend developer!";
+
+function changeSubtitle(text) {
+    subtitle.textContent = text;
 }
+
 function resetHeading() {
     heading.textContent = "Welcome to Isa’s Website";
 }
+
 function resetMessage() {
     message.textContent = "Click the button to change the page!";
 }
@@ -24,17 +28,19 @@ function resetMessage() {
 function resetSubtitle() {
     subtitle.textContent = "My First Project";
 }
+
 button.addEventListener("click", function () {
 
- if (clicked === false) {
-    changeHeading();
-    changeMessage();
-  changeSubtitle();
-     clicked = true;
-} else {
-     resetHeading();
-       resetMessage();
-        resetSubtitle();  
+    if (clicked === false) {
+        changeHeading("Welcome to My World!");
+        changeMessage("You just changed this webpage with JavaScript!");
+        changeSubtitle("I am becoming a frontend developer!");
+        clicked = true;
+
+    } else {
+        resetHeading();
+        resetMessage();
+        resetSubtitle();
         clicked = false;
     }
 });
