@@ -149,3 +149,34 @@ console.log("Order being sent:", order);
     }
 
 });
+
+const searchInput = document.querySelector("#searchInput");
+const searchButton = document.querySelector("#searchButton");
+const searchResults = document.querySelector("#searchResults");
+
+searchButton.addEventListener("click", async function() {
+
+    const searchTerm = searchInput.value.trim();
+
+    if (searchTerm === "") {
+        searchResults.textContent = "Please enter a product.";
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            "https://dummyjson.com/products/search?q=" + searchTerm
+        );
+
+        const data = await response.json();
+
+        console.log("Search results:", data);
+
+    } catch (error) {
+
+        console.log("Search error:", error);
+
+    }
+
+});
