@@ -110,7 +110,9 @@ const quantity = Number(orderQuantity.value);
     product: product,
     quantity: quantity
 };
-
+    
+console.log("Order being sent:", order);
+    
     try {
 
         const response = await fetch("https://hook.us1.make.com/9p36fjbyewqprbf5mognxsnkftmb734l", {
