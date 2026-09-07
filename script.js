@@ -51,7 +51,7 @@ async function getCrop() {
 
     const data = await response.json();
 
-    console.log(data.tittle);
+    console.log(data.title);
 }
 
 getCrop();
