@@ -96,6 +96,9 @@ const orderProduct = document.querySelector("#orderProduct");
 const orderQuantity = document.querySelector("#orderQuantity");
 const orderResult = document.querySelector("#orderResult");
 
+const orderPrice = document.querySelector("#orderPrice");
+const orderTotal = document.querySelector("#orderTotal");
+
 orderForm.addEventListener("submit", async function(event) {
 
     event.preventDefault();
@@ -103,6 +106,11 @@ const name = customerName.value;
 const phone = customerPhone.value;
 const product = orderProduct.value;
 const quantity = Number(orderQuantity.value);
+const price = Number(orderPrice.value);
+
+const total = quantity * price;
+
+orderTotal.textContent = "Total: ₦" + total;
 
     const order = {
     name: name,
