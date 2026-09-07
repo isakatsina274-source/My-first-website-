@@ -109,4 +109,16 @@ fetch("https://dummyjson.com/products/add", {
 const orderForm = document.querySelector("#orderForm");
 const orderProduct = document.querySelector("#orderProduct");
 const orderQuantity = document.querySelector("#orderQuantity");
+
+orderForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const product = orderProduct.value;
+    const quantity = orderQuantity.value;
+
+    console.log("Product:", product);
+    console.log("Quantity:", quantity);
+
+});
 const orderResult = document.querySelector("#orderResult");
