@@ -109,6 +109,7 @@ fetch("https://dummyjson.com/products/add", {
 const orderForm = document.querySelector("#orderForm");
 const orderProduct = document.querySelector("#orderProduct");
 const orderQuantity = document.querySelector("#orderQuantity");
+const orderResult = document.querySelector("#orderResult");
 
 orderForm.addEventListener("submit", async function(event) {
 
@@ -125,25 +126,17 @@ orderForm.addEventListener("submit", async function(event) {
     try {
 
         const response = await fetch("https://hook.us1.make.com/ik63kgc88wf5z8dk6fw42r73n3bmtuyb", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(order)
-        });
-
-        const data = await response.json();
-
-        console.log("Order created:", data);
-
-        orderResult.textContent = "Order sent successfully! ID: " + data.id;
-
-    } catch (error) {
-
-        console.log("Error:", error);
-        orderResult.textContent = "Something went wrong.";
-
-    }
-
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(order)
 });
-const orderResult = document.querySelector("#orderResult");
+
+console.log("Webhook status:", response.status);
+
+if (!response.ok) {
+    throw new Error("Webhook request failed");
+}
+
+orderResult.textContent = "Order sent to Make.com successfully!";
