@@ -89,6 +89,9 @@ console.log("Stock:", data.stock);
 getCrop();
 
 const orderForm = document.querySelector("#orderForm");
+
+const customerName = document.querySelector("#customerName");
+const customerPhone = document.querySelector("#customerPhone");
 const orderProduct = document.querySelector("#orderProduct");
 const orderQuantity = document.querySelector("#orderQuantity");
 const orderResult = document.querySelector("#orderResult");
@@ -96,9 +99,10 @@ const orderResult = document.querySelector("#orderResult");
 orderForm.addEventListener("submit", async function(event) {
 
     event.preventDefault();
-
-    const product = orderProduct.value;
-    const quantity = Number(orderQuantity.value);
+const name = customerName.value;
+const phone = customerPhone.value;
+const product = orderProduct.value;
+const quantity = Number(orderQuantity.value);
 
     const order = {
         product: product,
