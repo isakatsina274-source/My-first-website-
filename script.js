@@ -60,6 +60,8 @@ async function getCrop() {
     try {
     
     const response = await fetch("https://dummyjson.com/products/1");
+        console.log(response.status);
+        
 if (!response.ok) {
     throw new Error("Failed to fetch product");
 }
