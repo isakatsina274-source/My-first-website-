@@ -102,7 +102,7 @@ fetch("https://dummyjson.com/products/add", {
     })
 .then(response => response.json())
 .then(data => {
-    console.log("Server response:", data);
+    console.log("Server response:", JSON.stringify(data, null, 2));
 });
 
 
