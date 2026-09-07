@@ -45,9 +45,9 @@ button {
     .subtitle {
     color: red;
     font-size: 28px;
+    }
 }
 
 #apiData {
     white-space: pre-line;
-}
 }
