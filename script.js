@@ -55,10 +55,12 @@ async function getCrop() {
 console.log("Title:", data.title);
 console.log("Price:", data.price);
 console.log("Stock:", data.stock);
+
     apiData.textContent =
-    "Product: " + data.title +
-    " | Price: " + data.price +
-    " | Stock: " + data.stock;
+    "Product: " + data.title + "\n" +
+    "Price: " + data.price + "\n" +
+    "Stock: " + data.stock;
+  
 }
 
 getCrop(); 
