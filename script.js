@@ -51,13 +51,17 @@ const productName = document.querySelector("#productName");
 const productPrice = document.querySelector("#productPrice");
 const productStock = document.querySelector("#productStock");
 
+const productImage = document.querySelector("#productImage");
+
 async function getCrop() {
 
     const response = await fetch("https://dummyjson.com/products/1");
 
     const data = await response.json();
-   
-    productName.textContent = "Product: " + data.title;
+
+    productImage.src = data.thumbnail;
+    
+productName.textContent = "Product: " + data.title;
 productPrice.textContent = "Price: " + data.price;
 productStock.textContent = "Stock: " + data.stock;
     
