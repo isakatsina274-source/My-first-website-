@@ -43,8 +43,7 @@ button.addEventListener("click", function () {
         resetSubtitle();
         clicked = false;
         }
-});
-const apiData = document.querySelector("#apiData");
+})
 
 productName.textContent = "NEW Product: " + data.title;
 
@@ -65,11 +64,6 @@ productStock.textContent = "Stock: " + data.stock;
 console.log("Title:", data.title);
 console.log("Price:", data.price);
 console.log("Stock:", data.stock);
-
-    apiData.textContent =
-    "Product: " + data.title + "\n" +
-    "Price: " + data.price + "\n" +
-    "Stock: " + data.stock;
   
 }
 
