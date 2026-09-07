@@ -42,8 +42,10 @@ button.addEventListener("click", function () {
         resetMessage();
         resetSubtitle();
         clicked = false;
-    }
- async function getCrop() {
+        }
+});
+
+async function getCrop() {
 
     const response = await fetch("https://dummyjson.com/products/1");
 
@@ -52,5 +54,12 @@ button.addEventListener("click", function () {
     console.log(data);
 }
 
-getCrop();   
+getCrop();
+
+
+
+
+
+
+    
 });
