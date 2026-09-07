@@ -88,6 +88,17 @@ console.log("Stock:", data.stock);
 
 getCrop(); 
 
+const order = {
+    product: "Grapes",
+    quantity: 20
+};
 
+fetch("https://dummyjson.com/products/add", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(order)
+});
 
 
