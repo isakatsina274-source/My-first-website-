@@ -106,3 +106,7 @@ fetch("https://dummyjson.com/products/add", {
     console.log("Full response:", data);
 });
 
+const orderForm = document.querySelector("#orderForm");
+const orderProduct = document.querySelector("#orderProduct");
+const orderQuantity = document.querySelector("#orderQuantity");
+const orderResult = document.querySelector("#orderResult");
