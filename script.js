@@ -74,8 +74,13 @@ productStock.textContent = "Stock: " + data.stock;
 console.log("Title:", data.title);
 console.log("Price:", data.price);
 console.log("Stock:", data.stock);
-  
-}
+
+    } catch (error) {
+
+        console.log("Something went wrong:", error);
+
+    }
+}  
 
 getCrop(); 
 
