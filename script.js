@@ -44,6 +44,7 @@ button.addEventListener("click", function () {
         clicked = false;
         }
 });
+const apiData = document.querySelector("#apiData");
 
 async function getCrop() {
 
