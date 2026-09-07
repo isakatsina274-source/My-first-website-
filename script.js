@@ -51,7 +51,10 @@ async function getCrop() {
 
     const data = await response.json();
 
-    console.log(data.title);
+    
+console.log(data.title);
+console.log(data.price);
+console.log(data.stock);
 }
 
 getCrop();
