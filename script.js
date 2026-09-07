@@ -56,10 +56,3 @@ async function getCrop() {
 
 getCrop();
 
-
-
-
-
-
-    
-});
