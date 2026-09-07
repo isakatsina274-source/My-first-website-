@@ -110,15 +110,40 @@ const orderForm = document.querySelector("#orderForm");
 const orderProduct = document.querySelector("#orderProduct");
 const orderQuantity = document.querySelector("#orderQuantity");
 
-orderForm.addEventListener("submit", function(event) {
+orderForm.addEventListener("submit", async function(event) {
 
     event.preventDefault();
 
     const product = orderProduct.value;
-    const quantity = orderQuantity.value;
+    const quantity = Number(orderQuantity.value);
 
-    console.log("Product:", product);
-    console.log("Quantity:", quantity);
+    const order = {
+        product: product,
+        quantity: quantity
+    };
+
+    try {
+
+        const response = await fetch("https://dummyjson.com/products/add", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(order)
+        });
+
+        const data = await response.json();
+
+        console.log("Order created:", data);
+
+        orderResult.textContent = "Order sent successfully! ID: " + data.id;
+
+    } catch (error) {
+
+        console.log("Error:", error);
+        orderResult.textContent = "Something went wrong.";
+
+    }
 
 });
 const orderResult = document.querySelector("#orderResult");
