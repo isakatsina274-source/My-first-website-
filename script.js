@@ -124,7 +124,7 @@ orderForm.addEventListener("submit", async function(event) {
 
     try {
 
-        const response = await fetch("https://dummyjson.com/products/add", {
+        const response = await fetch("https://hook.us1.make.com/ik63kgc88wf5z8dk6fw42r73n3bmtuyb", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
