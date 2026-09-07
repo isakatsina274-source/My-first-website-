@@ -99,6 +99,10 @@ fetch("https://dummyjson.com/products/add", {
         "Content-Type": "application/json"
     },
     body: JSON.stringify(order)
+    })
+.then(response => response.json())
+.then(data => {
+    console.log("Server response:", data);
 });
 
 
