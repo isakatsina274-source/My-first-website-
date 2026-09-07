@@ -51,6 +51,8 @@ const productName = document.querySelector("#productName");
 const productPrice = document.querySelector("#productPrice");
 const productStock = document.querySelector("#productStock");
 
+const productDescription = document.querySelector("#productDescription");
+
 const productImage = document.querySelector("#productImage");
 
 async function getCrop() {
@@ -64,6 +66,8 @@ async function getCrop() {
 productName.textContent = "Product: " + data.title;
 productPrice.textContent = "Price: " + data.price;
 productStock.textContent = "Stock: " + data.stock;
+    
+    productDescription.textContent = "Description: " + data.description;
     
 console.log("Title:", data.title);
 console.log("Price:", data.price);
