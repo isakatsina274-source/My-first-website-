@@ -86,25 +86,7 @@ console.log("Stock:", data.stock);
     }
 }  
 
-getCrop(); 
-
-const order = {
-    product: "Grapes",
-    quantity: 20
-};
-
-fetch("https://dummyjson.com/products/add", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(order)
-    })
-.then(response => response.json())
-.then(data => {
-    console.log("New ID:", data.id);
-    console.log("Full response:", data);
-});
+getCrop();
 
 const orderForm = document.querySelector("#orderForm");
 const orderProduct = document.querySelector("#orderProduct");
@@ -126,17 +108,26 @@ orderForm.addEventListener("submit", async function(event) {
     try {
 
         const response = await fetch("https://hook.us1.make.com/ik63kgc88wf5z8dk6fw42r73n3bmtuyb", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(order)
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(order)
+        });
+
+        console.log("Webhook status:", response.status);
+
+        if (!response.ok) {
+            throw new Error("Webhook request failed");
+        }
+
+        orderResult.textContent = "Order sent to Make.com successfully!";
+
+    } catch (error) {
+
+        console.log("Error:", error);
+        orderResult.textContent = "Something went wrong.";
+
+    }
+
 });
-
-console.log("Webhook status:", response.status);
-
-if (!response.ok) {
-    throw new Error("Webhook request failed");
-}
-
-orderResult.textContent = "Order sent to Make.com successfully!";
