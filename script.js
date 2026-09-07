@@ -46,6 +46,8 @@ button.addEventListener("click", function () {
 });
 const apiData = document.querySelector("#apiData");
 
+productName.textContent = "NEW Product: " + data.title;
+
 const productName = document.querySelector("#productName");
 const productPrice = document.querySelector("#productPrice");
 const productStock = document.querySelector("#productStock");
