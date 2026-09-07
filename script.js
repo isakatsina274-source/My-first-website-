@@ -105,9 +105,11 @@ const product = orderProduct.value;
 const quantity = Number(orderQuantity.value);
 
     const order = {
-        product: product,
-        quantity: quantity
-    };
+    name: name,
+    phone: phone,
+    product: product,
+    quantity: quantity
+};
 
     try {
 
