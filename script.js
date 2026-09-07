@@ -59,7 +59,7 @@ async function getCrop() {
 
     try {
     
-    const response = await fetch("https://dummyjson.com/products/19999");
+    const response = await fetch("https://dummyjson.com/products/9999");
         console.log(response.status);
         
 if (!response.ok) {
