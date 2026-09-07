@@ -50,4 +50,10 @@ button {
 
 #apiData {
     white-space: pre-line;
+
+#productImage {
+    width: 200px;
+    height: auto;
+}
+    
 }
