@@ -116,7 +116,9 @@ orderTotal.textContent = "Total: ₦" + total;
     name: name,
     phone: phone,
     product: product,
-    quantity: quantity
+    quantity: quantity,
+    price: price,
+    total: total
 };
     
 console.log("Order being sent:", order);
