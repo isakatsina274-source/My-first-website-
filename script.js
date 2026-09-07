@@ -56,8 +56,8 @@ async function getCrop() {
     const response = await fetch("https://dummyjson.com/products/1");
 
     const data = await response.json();
-    
-productName.textContent = "Product: " + data.title;
+   
+    productName.textContent = "Product: " + data.title;
 productPrice.textContent = "Price: " + data.price;
 productStock.textContent = "Stock: " + data.stock;
     
