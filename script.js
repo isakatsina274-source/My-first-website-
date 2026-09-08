@@ -180,3 +180,4 @@ searchButton.addEventListener("click", async function() {
     }
 
 });
+https://dummyjson.com/products/search?q=phone&limit=5
